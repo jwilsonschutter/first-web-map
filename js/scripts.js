@@ -18,36 +18,59 @@ var bigParky = [
   {
     name: 'PELHAM BAY PARK',
     point: [-73.8104, 40.8677],
-    info: 'In the Last Quarter of 2020 this park had 152 Felonies'
+    info: 'In the Last Quarter of 2020 this park had 152 Felonies',
+    ranky: '1'
   },
   {
     name: 'VAN CORTLANDT PARK',
     point: [-73.88825, 40.8972],
-    info: 'In the Last Quarter of 2020 this park had 15 Felonies'
+    info: 'In the Last Quarter of 2020 this park had 15 Felonies',
+    ranky: '2'
   },
   {
     name: 'ROCKAWAY BEACH AND BOARDWALK',
     point: [-73.79084, 40.5888],
-    info: 'In the Last Quarter of 2020 this park had 7 Felonies'
+    info: 'In the Last Quarter of 2020 this park had 7 Felonies',
+    ranky: '3'
   },
   {
     name: 'FRESHKILLS PARK',
     point: [-74.1880, 40.5772],
-    info: 'In the Last Quarter of 2020 this park had 6 Felonies'
+    info: 'In the Last Quarter of 2020 this park had 6 Felonies',
+    ranky: '4'
   },
   {
     name: 'FLUSHING MEADOWS CORONA PARK',
     point: [-73.8428, 40.7400],
-    info: 'In the Last Quarter of 2020 this park had 5 Felonies'
+    info: 'In the Last Quarter of 2020 this park had 5 Felonies',
+    ranky: '5'
   }
 ]
 
 
 bigParky.forEach(function(bigParky) {
-console.log(bigParky.name, bigParky.point, bigParky.info)
+console.log(bigParky.name, bigParky.point, bigParky.info, bigParky.ranky)
+
+var markercolor = '#004a5a'
+
+if (bigParky.ranky === '2'){
+  color = '#007b7e'
+}
+
+if (bigParky.ranky === '3'){
+  color = '#07b089'
+}
+
+if (bigParky.ranky === '4'){
+  color = '#55e383'
+}
+
+if (bigParky.ranky === '5'){
+  color = '#d1ffc9'
+}
 
 new mapboxgl.Marker({
-color:"green",
+color: markercolor
 })
   .setLngLat(bigParky.point)
   .setPopup(new mapboxgl.Popup().setHTML(`
