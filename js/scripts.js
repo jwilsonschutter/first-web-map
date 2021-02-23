@@ -18,31 +18,31 @@ var bigParky = [
   {
     name: 'PELHAM BAY PARK',
     point: [-73.8104, 40.8677],
-    info: 'In the Last Quarter of 2020 this park had 152 Felonies',
+    info: 'In the Last Quarter of 2020 this park had 152 Felonies, making it the most dangerous park in NYC as of the last quarter of 2020',
     ranky: '1'
   },
   {
     name: 'VAN CORTLANDT PARK',
     point: [-73.88825, 40.8972],
-    info: 'In the Last Quarter of 2020 this park had 15 Felonies',
+    info: 'In the Last Quarter of 2020 this park had 15 Felonies, making it the second most dangerous park in NYC as of the last quarter of 2020',
     ranky: '2'
   },
   {
     name: 'ROCKAWAY BEACH AND BOARDWALK',
     point: [-73.79084, 40.5888],
-    info: 'In the Last Quarter of 2020 this park had 7 Felonies',
+    info: 'In the Last Quarter of 2020 this park had 7 Felonies, making it the third most dangerous park in NYC as of the last quarter of 2020',
     ranky: '3'
   },
   {
     name: 'FRESHKILLS PARK',
     point: [-74.1880, 40.5772],
-    info: 'In the Last Quarter of 2020 this park had 6 Felonies',
+    info: 'In the Last Quarter of 2020 this park had 6 Felonies, making it the fourth most dangerous park in NYC as of the last quarter of 2020',
     ranky: '4'
   },
   {
     name: 'FLUSHING MEADOWS CORONA PARK',
     point: [-73.8428, 40.7400],
-    info: 'In the Last Quarter of 2020 this park had 5 Felonies',
+    info: 'In the Last Quarter of 2020 this park had 5 Felonies, making it the fith most dangerous park in NYC as of the last quarter of 2020',
     ranky: '5'
   }
 ]
@@ -54,19 +54,19 @@ console.log(bigParky.name, bigParky.point, bigParky.info, bigParky.ranky)
 var markercolor = '#004a5a'
 
 if (bigParky.ranky === '2'){
-  color = '#007b7e'
+  markercolor = '#007b7e'
 }
 
 if (bigParky.ranky === '3'){
-  color = '#07b089'
+  markercolor = '#07b089'
 }
 
 if (bigParky.ranky === '4'){
-  color = '#55e383'
+  markercolor = '#55e383'
 }
 
 if (bigParky.ranky === '5'){
-  color = '#d1ffc9'
+  markercolor = '#d1ffc9'
 }
 
 new mapboxgl.Marker({
@@ -74,7 +74,7 @@ color: markercolor
 })
   .setLngLat(bigParky.point)
   .setPopup(new mapboxgl.Popup().setHTML(`
-    <div>
+    <div style="">
       <h3 style="color: #4682b4;
       font-family: sans-serif;
       font-size: 20px;
@@ -93,6 +93,8 @@ document.getElementById('center').addEventListener('click', function() {
     essential: true
   })
 });
+
+
   //set up dummy data
 // the sethmtl changes it to data.name it's pretty chill
 //forEach sets an array, so the first time the function runs it's equal to a certain object, the 2nd time it's the next, 3rd it's the next

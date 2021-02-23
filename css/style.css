@@ -48,6 +48,9 @@ position: fixed;
     font-family: sans-serif;
     border: 10px solid;
     border-image: linear-gradient(rgb(192, 192, 192, 0.7), rgb(128, 128, 128, 0.7)) 1;
+    white-space: nowrap;
+   overflow-x: auto;
+   overflow-y: hidden;
 }
 
 #onlegend h1{
@@ -92,9 +95,23 @@ border-image: linear-gradient(rgb(57, 133, 75), rgb(57, 133, 75)) 1;
 z-index: 10009;
 position: fixed;
 margin-left: 10px;
+margin-bottom: 5px;
 }
 
-#onlegend p{
+#dot2 {
+  height: 7px;
+  width: 7px;
+  background-color: linear-gradient(255, 255, 255), rgb(0, 0, 0)) 1;
+  border: 10px solid;
+  border-radius: 50%;
+  border-image: linear-gradient(rgb(0, 0, 0), rgb(255, 255, 255)) 1;
+  z-index: 10009;
+  position: fixed;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+#bigp {
   color: black;
   font-family: sans-serif;
   font-size: 12px;
@@ -102,12 +119,23 @@ margin-left: 10px;
   margin-left: 40px;
 }
 
+#littlep {
+  color: black;
+  font-family: sans-serif;
+  font-size: 12px;
+  text-align: left;
+  margin-left: 40px;
+  display: inline-block;
+}
+
+
 #onlegend button{
   color: #7ba7cc;
   font-family: sans-serif;
   float: right;
   font-size: 15px;
   margin-right: 10px;
+  display: inline-block;
 }
 
 #onlegend button:hover{
@@ -118,4 +146,21 @@ margin-left: 10px;
 #mapcountainer {
   width:100%;
   height:100%;
+}
+
+/*https://docs.mapbox.com/help/tutorials/building-a-store-locator/ tutorial to help me customize*/
+.mapboxgl-popup-close-button {
+  display: none;
+}
+
+.mapboxgl-popup-content{
+  width: 200px;
+  height: 180px;
+  background: #a9a9a9;
+  border: 10px solid;
+border-image: linear-gradient(rgb(192, 192, 192, 0.7), rgb(128, 128, 128, 0.7)) 1;
+}
+
+.mapboxgl-popup-content-wrapper {
+  padding: 1%;
 }
